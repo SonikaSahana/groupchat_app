@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 
 const bodyParser = require("body-parser");
-
+const loggerObj = require("./util/logger");
 const cors = require("cors");
 app.use(
   cors({
@@ -35,6 +35,7 @@ const User = require("./models/user");
 
 sequelize.sync({ force: true })
   .then((result) => {
+    loggerObj.log("starting app server")
     app.listen(3000);
   })
   .catch((err) => console.log(err));

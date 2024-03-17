@@ -2,8 +2,8 @@ const axiosInstance = axios.create({
     baseURL : "http://localhost:3000/user"
     })
     
-    document.getElementById('login').addEventListener('submit' , loginUser)
 
+document.getElementById('login').addEventListener('submit' , loginUser)
 
 async function loginUser(e){
     e.preventDefault()
@@ -23,8 +23,12 @@ async function loginUser(e){
             window.location.href ="/views/homepage.html"
         }
     }catch(e){
-        console.log(e)
-        alert(e.response.data.msg)
+        if (error.response) {
+            const errorMessage = error.response.data.message;
+            alert(errorMessage);
+          } else {
+            alert("An error occurred. Please try again later.");
+          }
     }
 
 }
