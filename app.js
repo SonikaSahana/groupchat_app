@@ -24,9 +24,7 @@ const User = require("./models/user");
 //     res.sendFile(path.join(__dirname, "frontend", "views", "login.html"));
 //   });
 
-sequelize
-.sync()
-  //.sync({ force: true })
+sequelize.sync({ force: true })
   .then((result) => {
     app.listen(3000);
   })
