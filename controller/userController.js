@@ -6,7 +6,7 @@ const { Op } = require("sequelize");
 const path = require("path");
 const getLoginPage = async (req, res, next) => {
     try {
-      res.sendFile(path.join(__dirname, "../", "frontend", "views", "login.html"));
+      res.sendFile(path.join(__dirname, "../", 'frontend','views', 'signup.html'));
     } catch (error) {
       console.log(error);
     }

@@ -3,9 +3,6 @@ const path = require("path");
 const app = express();
 
 const bodyParser = require("body-parser");
-app.use(express.static("frontend"));
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 
 const cors = require("cors");
 app.use(
@@ -19,6 +16,10 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const sequelize = require("./util/database");
+
+app.use(express.static(path.join(__dirname, 'frontend')));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //Router
 const userRouter = require("./router/userRouter");
