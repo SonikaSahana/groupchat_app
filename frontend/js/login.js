@@ -20,7 +20,7 @@ async function loginUser(e){
         if(result.data.success){
             alert("login succesfully")
             //localStorage.setItem('token' , result.data.token)
-            window.location ="/views/homepage.html"
+            window.location.href ="/views/homepage.html"
         }
     }catch(e){
         console.log(e)
