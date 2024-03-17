@@ -21,6 +21,8 @@ async function loginUser(e){
             alert("login succesfully")
             //localStorage.setItem('token' , result.data.token)
             window.location.href ="/views/homepage.html"
+        } else{
+            alert(result.data.message)
         }
     }catch(e){
         if (error.response) {
