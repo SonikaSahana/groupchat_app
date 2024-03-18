@@ -18,19 +18,11 @@ async function loginUser(e){
         const result = await axiosInstance.post('/login' , data)
         console.log(result)
         if(result.data.success){
-            alert("login succesfully")
-            //localStorage.setItem('token' , result.data.token)
-            window.location.href ="/views/homepage.html"
-        } else{
-            alert(result.data.message)
+            alert("login succesfully");
+            localStorage.setItem('token' , result.data.token);
+            window.location.href ="/views/homepage.html";
         }
     }catch(e){
-        if (error.response) {
-            const errorMessage = error.response.data.message;
-            alert(errorMessage);
-          } else {
-            alert("An error occurred. Please try again later.");
-          }
+        alert(e.response.data.message)
     }
-
 }

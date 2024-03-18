@@ -33,7 +33,8 @@ const User = require("./models/user");
 //     res.sendFile(path.join(__dirname, "frontend", "views", "login.html"));
 //   });
 
-sequelize.sync({ force: true })
+// sequelize.sync({ force: true })
+sequelize.sync()
   .then((result) => {
     loggerObj.log("starting app server")
     app.listen(3000);

@@ -7,8 +7,8 @@ const loggerObj = require("../util/logger");
 
 const path = require("path");
 
-function generateAccessToken(id, email) {
-    return jwt.sign({ userId: id, email: email }, process.env.JWT_TOKEN);
+function generateAccessToken(id, email, name) {
+    return jwt.sign({ userId: id, email: email, name: name }, process.env.JWT_TOKEN);
   }
   
 const getLoginPage = async (req, res, next) => {
@@ -74,7 +74,7 @@ const getLoginPage = async (req, res, next) => {
               return res.status(200).json({
                 success: true,
                 message: "Login Successful!",
-                token: generateAccessToken(user.id, user.email),
+                token: generateAccessToken(user.id, user.email, user.name),
               });
             } else {
               return res.status(401).json({
@@ -84,10 +84,14 @@ const getLoginPage = async (req, res, next) => {
             }
           });
         } else {
-          return res.status(404).json({
-            success: false,
-            message: "User doesn't Exists!",
-          });
+          // return res.status(404).json({
+          //   success: false,
+          //   message: "User doesn't Exists!",
+          // });
+        
+            return res.status(404).json({success : false , message : "please signup, you are not a memeber"})
+      
+        
         }
       });
     } catch (error) {
