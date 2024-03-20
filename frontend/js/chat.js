@@ -115,11 +115,12 @@ async function getMessages() {
     });
   });
 }
-
+const pollInterval = setInterval(getMessages, 1000);
 messageSendBtn.addEventListener("click", messageSend);
 // document.addEventListener("DOMContentLoaded", getMessagesFromLocalStorage);
 uiGroup.addEventListener("click", activeGroup);
 document.addEventListener("DOMContentLoaded", () => {
+  
   localStorage.setItem("groupName", "");
   localStorage.setItem("chats", JSON.stringify([]));
 });
