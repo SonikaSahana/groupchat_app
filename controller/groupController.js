@@ -1,7 +1,7 @@
 const path = require("path");
 const User = require("../models/user_model");
-const Group = require("../models/groupModel");
-const UserGroup = require("../models/userGroup");
+const Group = require("../models/group_model");
+const UserGroup = require("../models/admin_model");
 const { Op } = require("sequelize");
 
 exports.createGroup = async (req, res, next) => {
@@ -74,12 +74,12 @@ exports.addToGroup = async (req, res, next) => {
             });
           })
         );
-        res.status(201).json({ message: "Members Added Successfully!" });
+        res.status(201).json({ message: "members added successfully!" });
       } else {
-        res.status(201).json({ message: "Only Admins Can Add New Members" });
+        res.status(201).json({ message: "only admins aan add new members" });
       }
     } else {
-      res.status(201).json({ message: "Group doesn't exists!" });
+      res.status(201).json({ message: "group doesn't exists!" });
     }
   } catch (error) {
     console.log(error);
@@ -139,12 +139,12 @@ exports.deleteFromGroup = async (req, res, next) => {
             });
           })
         );
-        res.status(201).json({ message: "Members Deleted Successfully!" });
+        res.status(201).json({ message: "members deleted successfully!" });
       } else {
-        res.status(201).json({ message: "Only Admins Can Delete Members" });
+        res.status(201).json({ message: "only admins can delete members" });
       }
     } else {
-      res.status(201).json({ message: "Group doesn't exists!" });
+      res.status(201).json({ message: "group doesn't exists!" });
     }
   } catch (error) {
     console.log(error);
