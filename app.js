@@ -24,10 +24,11 @@ app.use(bodyParser.json());
 //Router
 const userRouter = require("./router/userRouter");
 
-const User = require("./models/user");
+const User = require("./models/user_model");
 
- app.use("/", userRouter);
- app.use("/user",userRouter)
+app.use("/", userRouter);
+app.use("/user",userRouter)
+app.use("/chat", chatRouter)
 // app.get('/', (req, res) => {
 //     // Serve your HTML file
 //     res.sendFile(path.join(__dirname, "frontend", "views", "login.html"));
