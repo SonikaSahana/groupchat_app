@@ -1,4 +1,4 @@
-const User = require("../models/user");
+const User = require("../models/user_model");
 const bcrypt = require("bcrypt");
 const sequelize = require("../util/database");
 const { Op } = require("sequelize");
@@ -7,10 +7,22 @@ const loggerObj = require("../util/logger");
 
 const path = require("path");
 
+
+const getHomePage = async (req, res, next) => {
+  try {
+    res.sendFile(
+      path.join(__dirname, "../", "frontend", "views", "homePage.html")
+    );
+  } catch {
+    (err) => console.log(err);
+  }
+};
+
+
 function generateAccessToken(id, email, name) {
     return jwt.sign({ userId: id, email: email, name: name }, process.env.JWT_TOKEN);
   }
-  
+
 const getLoginPage = async (req, res, next) => {
     try {
       res.sendFile(path.join(__dirname, "../", 'frontend','views', 'login.html'));
@@ -61,7 +73,7 @@ const getLoginPage = async (req, res, next) => {
     try {
       const email = req.body.email;
       const password = req.body.password;
-      loggerObj.log("info", email,password)
+      loggerObj.info("user logged in")
       await User.findOne({ where: { email: email } }).then((user) => {
         if (user) {
           bcrypt.compare(password, user.password, (err, result) => {
@@ -102,6 +114,8 @@ const getLoginPage = async (req, res, next) => {
   module.exports = {
     getLoginPage,
     userSignUp,
-    userLogin
+    userLogin,
+    getHomePage
+   
   };
   

@@ -1,68 +1,86 @@
-body{
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
-}
-
-.signup{
+    height: 100vh;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);;
+  }
+  
+  .container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .form-container {
+    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    border: 0.8rem solid #a389b7;
-    padding: 2rem;
-    background-color:whitesmoke;
-}
-.signup button{
-    
-
-    width: 6rem;
+  }
+  
+  .form-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  .form-container span {
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .form-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s ease;
+  }
+  
+  .form-container input:focus {
+    outline: none;
+    border-bottom-color: #007bff;
+  }
+  
+  .form-container button {
+  padding: 15px;
+  /* background-color: #007bff; */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 6rem;
     /* margin: 0 4rem; */
     box-sizing: border-box;
-    padding: 0.8rem 0.4rem;
+    /* padding: 0.8rem 0.4rem; */
     background: linear-gradient(-135deg, #71b7e6, #9b59b6);
-    border-radius: 0.4rem;
-    margin: 0 6rem;
-}
-
-
-
-.email label{
-    margin-left: 2rem;
-}
-label{
-    font-size: large;
-    margin: 0.5rem;
-}
-
-input{
-    padding: 0.4rem;
-    width: 21rem;
-    border-radius: 0.4rem;
-    font-size: medium;
-    margin: 0.5rem;
-}
-
-.signup >button{
-    width: fit-content;
-    color: linear-gradient(135deg, #71b7e6, #9b59b6);
-}
-
-.name label{
-    margin: 1.2rem;
-}
-
-.signup a {
-    font-size: larger;
+    /* border-radius: 0.4rem; */
+    /* margin: 0 6rem; */
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-container button a {
+    color: #fff;
     text-decoration: none;
-
-    &:hover{
-        color: rgb(215, 14, 88);
-    }
-}
-
-h2{
-    font-size: 2rem;
-}
+    font-weight: bold;
+  }
+  
+  .form-container button a:hover {
+    text-decoration: underline;
+  }
+  .ExistingUserBtn{
+    width: 250px;
+  }
