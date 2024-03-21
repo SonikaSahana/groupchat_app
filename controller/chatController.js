@@ -4,6 +4,7 @@ const Chat = require("../models/chatModels");
 const Group = require("../models/group_model");
 const sequelize = require("../util/database");
 const { Op } = require("sequelize");
+const S3Services = require('../services/s3services')
 
 const io = require("socket.io")(5000, {
   cors: {
