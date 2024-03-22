@@ -58,7 +58,7 @@ body {
     border-bottom-color: #007bff;
   }
   
-  .login-display >button {
+  button[type="submit"]{
     padding: 15px;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
     border: none;
@@ -98,4 +98,5 @@ body {
   }
   .login-display >button{
     width: fit-content;
+    color: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
