@@ -26,8 +26,10 @@ body {
   }
   
   form {
+    padding: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
   span {
@@ -38,6 +40,7 @@ body {
   
   .input-container {
     margin-bottom: 20px;
+    
   }
   
   .input-container input {
@@ -55,7 +58,7 @@ body {
     border-bottom-color: #007bff;
   }
   
-  button[type="submit"] {
+  .login-display >button {
     padding: 15px;
     background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
     color: linear-gradient(135deg, #71b7e6, #9b59b6);;
@@ -94,3 +97,7 @@ body {
   .signup-link a:hover {
     color: linear-gradient(135deg, #71b7e6, #9b59b6);
   }
+  .login-display >button{
+    width: fit-content;
+    background-color:linear-gradient(135deg, #71b7e6, #9b59b6);
+}
