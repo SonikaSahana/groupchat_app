@@ -58,7 +58,7 @@ body {
   button[type="submit"] {
     padding: 15px;
     background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
-    color: #fff;
+    color: linear-gradient(135deg, #71b7e6, #9b59b6);;
     border: none;
     border-radius: 25px;
     cursor: pointer;
