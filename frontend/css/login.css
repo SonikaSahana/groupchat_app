@@ -20,7 +20,7 @@ body{
     align-items: center;
 }
 
-.login-display button{
+.login-display button, #forgot-password{
     
 
     width: 6rem;
@@ -74,16 +74,14 @@ h2{
     text-align: center;
   }
   
-  #forgot-password a {
-    color: #007bff;
+  #forgot-password a, button a {
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
   }
   
-  #forgot-password a:hover {
-    color: #0056b3;
+  #forgot-password a:hover, button a:hover {
+    text-decoration: underline;
   }
-
 /* #forgot-password{
     min-width: max-content;
 } */
