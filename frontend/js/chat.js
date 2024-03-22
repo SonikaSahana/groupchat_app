@@ -3,7 +3,7 @@ const messageSendBtn = document.getElementById("messageSendBtn");
 const chatBoxBody = document.getElementById("chatBoxBody");
 const uiGroup = document.getElementById("groups");
 const groupNameHeading = document.getElementById("groupNameHeading");
-const socket = io("http://localhost:5000");
+const socket = io("http://3.25.113.52:4000");
 socket.on("data", (data) => {
   console.log(data);
 });
