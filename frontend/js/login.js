@@ -1,5 +1,5 @@
 const axiosInstance = axios.create({
-    baseURL : "http://3.25.113.52:3000/user"
+    baseURL : "http://3.25.113.52:4000/user"
     })
     
 

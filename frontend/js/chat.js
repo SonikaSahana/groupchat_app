@@ -44,7 +44,7 @@ async function messageSend() {
       return alert("Select group to send the message");
     }
     const res = await axios.post(
-      `http://localhost:3000/chat/sendMessage/`,
+      `http://3.25.113.52:4000/chat/sendMessage/`,
       {
         message: message,
         groupName: groupName,
@@ -159,7 +159,7 @@ async function getMessages() {
 //       param = 0;
 //     }
 //     const res = await axios.get(
-//       `http://localhost:3000/chat/getMessages?param=${param}&groupName=${groupName}`
+//       `http://localhost:4000/chat/getMessages?param=${param}&groupName=${groupName}`
 //     );
 //     const token = localStorage.getItem("token");
 //     const decodedToken = decodeToken(token);

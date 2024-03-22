@@ -8,7 +8,7 @@ const S3Services = require('../services/s3services')
 
 const io = require("socket.io")(5000, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:4000",
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true,

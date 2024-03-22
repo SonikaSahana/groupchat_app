@@ -69,6 +69,6 @@ sequelize
   .sync({ force: true })
   .then((result) => {
     loggerObj.log("started app server")
-    app.listen(3000);
+    app.listen(4000);
   })
   .catch((err) => console.log(err));
