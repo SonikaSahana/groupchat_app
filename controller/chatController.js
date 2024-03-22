@@ -6,7 +6,7 @@ const sequelize = require("../util/database");
 const { Op } = require("sequelize");
 const S3Services = require('../services/s3services')
 
-const io = require("socket.io")(4000, {
+const io = require("socket.io")(5000, {
   cors: {
     origin: "http://3.25.113.52:4000",
     methods: ["GET", "POST"],
