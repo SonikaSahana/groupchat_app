@@ -1,121 +1,93 @@
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background:linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-.login-display{
+    height: 100vh;
+    background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  
+  .login-display {
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 100%;
-    max-width: 500px;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.login-display button, #forgot-password{
-    
-
-  padding: 12px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 8px;
-  background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
-  transition: background-color 0.3s ease;
-}
-
-input:focus {
-  outline: none;
-  background-color: #e0e0e0;
-}
-
-button[type="submit"], #forgot-password {
-  width: calc(100% - 20px); /* Make the link width same as the button */
-  padding: 12px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover, #forgot-password:hover {
-  background-color: #0056b3;
-}
-
-#forgot-password {
-  margin-top: 20px;
-  text-align: center;
-}
-
-#forgot-password a, button a {
-  color: #fff;
-  text-decoration: none;
-}
-
-#forgot-password a:hover, button a:hover {
-  text-decoration: underline;
-}
-
-
-
-
-.email label{
-    margin-left: 2rem;
-}
-label{
-    font-size: large;
-    margin: 0.5rem;
-}
-
-input{
-    padding: 0.4rem;
-    width: 21rem;
-    border-radius: 0.4rem;
-    font-size: medium;
-    margin: 0.5rem;
-}
-
-.login-display >button{
-    width: fit-content;
-    background-color:linear-gradient(135deg, #71b7e6, #9b59b6);
-}
-
-.login-display a {
-    font-size: larger;
-    text-decoration: none;
-
-    &:hover{
-        color: rgb(215, 14, 88);
-    }
-}
-
-h2{
+    padding: 40px;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  h2 {
     margin-bottom: 20px;
     color: #333;
-    font-size: 2rem;
-}
-#forgot-password {
-    margin-top: 20px;
     text-align: center;
   }
   
-  #forgot-password a, button a {
-    color: #fff;
-    text-decoration: none;
+  form {
+    display: flex;
+    flex-direction: column;
   }
   
-  #forgot-password a:hover, button a:hover {
-    text-decoration: underline;
+  span {
+    margin-bottom: 20px;
+    color: #666;
+    text-align: center;
   }
-/* #forgot-password{
-    min-width: max-content;
-} */
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container input {
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background-color: #f5f5f5;
+    transition: border-bottom-color 0.3s ease;
+  }
+  
+  .input-container input:focus {
+    outline: none;
+    border-bottom-color: #007bff;
+  }
+  
+  button[type="submit"] {
+    padding: 12px;
+    background-color: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  #forgot-password {
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #forgot-password:hover {
+    color: #0056b3;
+  }
+  
+  .signup-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .signup-link a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-link a:hover {
+    color: #0056b3;
+  }
