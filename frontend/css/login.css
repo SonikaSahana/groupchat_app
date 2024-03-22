@@ -69,7 +69,21 @@ h2{
     color: #333;
     font-size: 2rem;
 }
+#forgot-password {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #forgot-password a:hover {
+    color: #0056b3;
+  }
 
-#forgot-password{
+/* #forgot-password{
     min-width: max-content;
-}
+} */
