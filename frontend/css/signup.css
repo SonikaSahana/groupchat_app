@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
   }
   
   .container {
@@ -73,14 +73,21 @@ body {
   }
   
   .form-container button a {
-    color: #fff;
-    text-decoration: none;
+    /* color: #fff; */
+    /* text-decoration: none; */
     font-weight: bold;
+    width: 250px;
+    color: linear-gradient(135deg, #71b7e6, #9b59b6);
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
   
   .form-container button a:hover {
     text-decoration: underline;
   }
-  .ExistingUserBtn{
+  /* .ExistingUserBtn{
     width: 250px;
-  }
+    color: linear-gradient(135deg, #71b7e6, #9b59b6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  } */
